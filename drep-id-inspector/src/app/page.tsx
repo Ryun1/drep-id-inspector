@@ -91,22 +91,24 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen p-8">
       <p className="mb-4">DRep Inspector</p>
-      <input
-        type="text"
-        value={input}
-        onChange={handleInputChange}
-        onFocus={handleFocus}
-        onBlur={handleBlur}
-        className="mb-4 p-2 border border-gray-300 rounded"
-        placeholder={placeholder}
-      />
-      {features && (
-        <ul>
-          {features.map((feature, index) => (
-            <li key={index}>{feature}</li>
-          ))}
-        </ul>
-      )}
+      <div className="flex flex-col items-center">
+        <input
+          type="text"
+          value={input}
+          onChange={handleInputChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
+          className="mb-4 p-2 border border-gray-300 rounded"
+          placeholder={placeholder}
+        />
+        {features && (
+          <ul className="fixed-features">
+            {features.map((feature, index) => (
+              <li key={index}>{feature}</li>
+            ))}
+          </ul>
+        )}
+      </div>
     </div>
   );
 }
