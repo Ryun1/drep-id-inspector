@@ -7,7 +7,7 @@
     "build": "next build",
     "deploy": "npm run build && gh-pages -d out",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint --max-warnings=0"
   },
   "dependencies": {
     "bech32-buffer": "^0.2.1",
