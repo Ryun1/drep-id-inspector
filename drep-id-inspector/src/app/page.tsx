@@ -10,7 +10,7 @@ export default function Home() {
   const isValidDRepID = (bechID: string): boolean => {
     // DRep ID regex pattern
     // they start with drep1 (at length of 56 or 58) or drep_script1 (at length of 63)
-    const drepIDPattern = /^(drep1[a-zA-Z0-9]{51,53}|drep_script1[a-zA-Z0-9]{52})$/;
+    const drepIDPattern = /^(drep1[a-zA-Z0-9]{51,53}|drep_script1[a-zA-Z0-9]{51})$/;
     return drepIDPattern.test(bechID);
   };
 
